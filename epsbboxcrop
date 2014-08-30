@@ -1,0 +1,7 @@
+#!/bin/sh
+# Auto computing BoundingBox and HiResBoundingBox of EPS file by Ghostscript.
+epsbboxcrop="`dirname \"$0\"`/gs"
+if test ! -x "$epsbboxcrop"; then
+	epsbboxcrop="gs"
+fi
+exec "$epsbboxcrop" -q -dNOPAUSE -dBATCH -sDEVICE=bbox "$@"
