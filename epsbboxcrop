@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 # Auto computing BoundingBox and HiResBoundingBox of EPS file by Ghostscript.
 epsbboxcrop="`dirname \"$0\"`/gs"
 if test ! -x "$epsbboxcrop"; then
